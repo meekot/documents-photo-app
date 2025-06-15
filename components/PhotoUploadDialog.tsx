@@ -48,6 +48,8 @@ export function PhotoUploadDialog({ isOpen, onClose, country, translation }: Pho
   const { processImageWithSteps } = usePassportPhotoProcessor();
 
   const handleImageUpload = useCallback(async (e: React.ChangeEvent<HTMLInputElement>) => {
+    setDialogState('processing');
+    setCurrentStep('loading');
     if (!modelLoaded.current) {
       await loadFaceMesh();
       modelLoaded.current = true;
@@ -58,9 +60,6 @@ export function PhotoUploadDialog({ isOpen, onClose, country, translation }: Pho
     if (!file) return;
 
     try {
-      setDialogState('processing');
-      setCurrentStep('loading');
-      
       // Resize the image first
       const canvas = await resizeImage(file, 1024);
       
@@ -160,19 +159,19 @@ export function PhotoUploadDialog({ isOpen, onClose, country, translation }: Pho
 
       {/* Preparation Tips */}
       <div className="bg-[#f5fbfe] rounded-lg p-4">
-        <h4 className="font-medium text-[#121417] mb-3 text-center">Quick Tips</h4>
+        <h4 className="font-medium text-[#121417] mb-3 text-center">{translation.preparationTips.title}</h4>
         <div className="grid grid-cols-3 gap-4 text-center">
           <div>
             <div className="text-2xl mb-1">💡</div>
-            <div className="text-xs text-[#61758a]">Good lighting</div>
+            <div className="text-xs text-text-secondary">{translation.preparationTips.goodLighting}</div>
           </div>
           <div>
             <div className="text-2xl mb-1">🎯</div>
-            <div className="text-xs text-[#61758a]">Plain background</div>
+            <div className="text-xs text-text-secondary">{translation.preparationTips.neutralBackground}</div>
           </div>
           <div>
             <div className="text-2xl mb-1">👁️</div>
-            <div className="text-xs text-[#61758a]">Face the camera</div>
+            <div className="text-xs text-text-secondary">{translation.preparationTips.faceCamera}</div>
           </div>
         </div>
       </div>

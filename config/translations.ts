@@ -48,6 +48,8 @@ export interface Translation {
     privacy: string;
     contact: string;
     copyright: string;
+    allCountries: string;
+    countryDescription: string;
   };
 }
 
@@ -101,7 +103,9 @@ export const TRANSLATIONS: Record<string, Translation> = {
       terms: "Terms",
       privacy: "Privacy",
       contact: "Contact",
-      copyright: "© 2025 Meekot. Made in France."
+      copyright: "© 2025 Meekot. Made in France.",
+      allCountries: "All Countries",
+      countryDescription: "Generate passport and ID photos that meet the official requirements for each country."
     }
   },
   fr: {
@@ -153,7 +157,9 @@ export const TRANSLATIONS: Record<string, Translation> = {
       terms: "Conditions",
       privacy: "Confidentialité",
       contact: "Contact",
-      copyright: "© 2025 Meekot. Fabriqué en France."
+      copyright: "© 2025 Meekot. Fabriqué en France.",
+      allCountries: "Tous les Pays",
+      countryDescription: "Générez des photos de passeport et d'identité qui répondent aux exigences officielles de chaque pays."
     }
   },
   de: {
@@ -205,7 +211,9 @@ export const TRANSLATIONS: Record<string, Translation> = {
       terms: "Bedingungen",
       privacy: "Datenschutz",
       contact: "Kontakt",
-      copyright: "© 2025 Meekot. Hergestellt in Frankreich."
+      copyright: "© 2025 Meekot. Hergestellt in Frankreich.",
+      allCountries: "Alle Länder",
+      countryDescription: "Erstellen Sie Reisepass- und Ausweisfotos, die den offiziellen Anforderungen jedes Landes entsprechen."
     }
   },
   ru: {
@@ -257,7 +265,9 @@ export const TRANSLATIONS: Record<string, Translation> = {
       terms: "Условия",
       privacy: "Конфиденциальность",
       contact: "Контакты",
-      copyright: "© 2025 Meekot. Сделано во Франции."
+      copyright: "© 2025 Meekot. Сделано во Франции.",
+      allCountries: "Все Страны",
+      countryDescription: "Создавайте фотографии для паспорта и удостоверения личности, которые соответствуют официальным требованиям каждой страны."
     }
   },
   nl: {
@@ -309,7 +319,9 @@ export const TRANSLATIONS: Record<string, Translation> = {
       terms: "Voorwaarden",
       privacy: "Privacy",
       contact: "Contact",
-      copyright: "© 2025 Meekot. Gemaakt in Frankrijk."
+      copyright: "© 2025 Meekot. Gemaakt in Frankrijk.",
+      allCountries: "Alle Landen",
+      countryDescription: "Genereer paspoort- en ID-foto's die voldoen aan de officiële vereisten van elk land."
     }
   },
   da: {
@@ -361,7 +373,9 @@ export const TRANSLATIONS: Record<string, Translation> = {
       terms: "Vilkår",
       privacy: "Privatliv",
       contact: "Kontakt",
-      copyright: "© 2025 Meekot. Lavet i Frankrig."
+      copyright: "© 2025 Meekot. Lavet i Frankrig.",
+      allCountries: "Alle Lande",
+      countryDescription: "Generer pas- og ID-fotos, der opfylder de officielle krav for hvert land."
     }
   },
   sv: {
@@ -413,7 +427,9 @@ export const TRANSLATIONS: Record<string, Translation> = {
       terms: "Villkor",
       privacy: "Integritet",
       contact: "Kontakt",
-      copyright: "© 2025 Meekot. Tillverkad i Frankrike."
+      copyright: "© 2025 Meekot. Tillverkad i Frankrike.",
+      allCountries: "Alla Länder",
+      countryDescription: "Generera pass- och ID-foton som uppfyller de officiella kraven för varje land."
     }
   }
 };
