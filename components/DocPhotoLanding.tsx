@@ -60,9 +60,9 @@ export default function DocPhotoLanding({ country, translation, currentLang }: D
             <div className="flex items-center space-x-2">
               <select 
                 value={currentLang}
-                onChange={(e) => {
+                onChange={() => {
                   if (typeof window !== 'undefined') {
-                    window.location.href = `/${country.code}/${e.target.value}`;
+                    // window.location.href = `/${country.code}/${e.target.value}`;
                   }
                 }}
 
