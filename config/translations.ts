@@ -6,6 +6,27 @@ export interface Translation {
   freeDescription: string;
   uploadPhoto: string;
   getPhoto: string;
+  printFormats: {
+    title: string;
+    single: string;
+    singleDesc: string;
+    sheet4x6: string;
+    sheet4x6Desc: string;
+    sheet5x7: string;
+    sheet5x7Desc: string;
+    sheetA4: string;
+    sheetA4Desc: string;
+    walletSize: string;
+    walletSizeDesc: string;
+    canonSelphy: string;
+    canonSelphyDesc: string;
+    choosePrintFormat: string;
+    quickDownload: string;
+    formatDetails: string;
+    photosPerSheet: string;
+    printSize: string;
+    resolution: string;
+  };
   features: {
     noUploads: string;
     privacyFirst: string;
@@ -62,6 +83,27 @@ export const TRANSLATIONS: Record<string, Translation> = {
     freeDescription: "and open-source",
     uploadPhoto: "Upload photo",
     getPhoto: "Get a photo",
+    printFormats: {
+      title: "Choose Print Format",
+      single: "Single Photo",
+      singleDesc: "One photo at actual size",
+      sheet4x6: "4×6 Sheet (4 photos)",
+      sheet4x6Desc: "4 photos on a 4×6 inch sheet",
+      sheet5x7: "5×7 Sheet (6 photos)",
+      sheet5x7Desc: "6 photos on a 5×7 inch sheet",
+      sheetA4: "A4 Sheet (8 photos)",
+      sheetA4Desc: "8 photos on an A4 sheet",
+      walletSize: "Wallet Size Sheet (16 photos)",
+      walletSizeDesc: "16 small wallet-sized photos",
+      canonSelphy: "Canon Selphy (4×6 inch)",
+      canonSelphyDesc: "Optimized for Canon Selphy printers",
+      choosePrintFormat: "Choose Print Format",
+      quickDownload: "Quick Download",
+      formatDetails: "Format Details",
+      photosPerSheet: "photos per sheet",
+      printSize: "Print size",
+      resolution: "Resolution: 300 DPI (print quality)"
+    },
     features: {
       noUploads: "No uploads",
       privacyFirst: "Privacy first",
@@ -116,6 +158,25 @@ export const TRANSLATIONS: Record<string, Translation> = {
     freeDescription: "et open-source",
     uploadPhoto: "Télécharger une photo",
     getPhoto: "Obtenir une photo",
+    printFormats: {
+      title: "Choisir le Format d'Impression",
+      single: "Photo Unique",
+      singleDesc: "Une photo à la taille réelle",
+      sheet4x6: "Feuille 4×6 (4 photos)",
+      sheet4x6Desc: "4 photos sur une feuille 4×6 pouces",
+      sheet5x7: "Feuille 5×7 (6 photos)",
+      sheet5x7Desc: "6 photos sur une feuille 5×7 pouces",
+      sheetA4: "Feuille A4 (8 photos)",
+      sheetA4Desc: "8 photos sur une feuille A4",
+      walletSize: "Feuille Format Portefeuille (16 photos)",
+      walletSizeDesc: "16 petites photos format portefeuille",
+      choosePrintFormat: "Choisir le Format d'Impression",
+      quickDownload: "Téléchargement Rapide",
+      formatDetails: "Détails du Format",
+      photosPerSheet: "photos par feuille",
+      printSize: "Taille d'impression",
+      resolution: "Résolution: 300 DPI (qualité impression)"
+    },
     features: {
       noUploads: "Aucun téléchargement",
       privacyFirst: "Confidentialité d'abord",
@@ -170,6 +231,25 @@ export const TRANSLATIONS: Record<string, Translation> = {
     freeDescription: "und Open-Source",
     uploadPhoto: "Foto hochladen",
     getPhoto: "Foto erhalten",
+    printFormats: {
+      title: "Druckformat Wählen",
+      single: "Einzelnes Foto",
+      singleDesc: "Ein Foto in Originalgröße",
+      sheet4x6: "4×6 Blatt (4 Fotos)",
+      sheet4x6Desc: "4 Fotos auf einem 4×6 Zoll Blatt",
+      sheet5x7: "5×7 Blatt (6 Fotos)",
+      sheet5x7Desc: "6 Fotos auf einem 5×7 Zoll Blatt",
+      sheetA4: "A4 Blatt (8 Fotos)",
+      sheetA4Desc: "8 Fotos auf einem A4 Blatt",
+      walletSize: "Brieftaschenformat Blatt (16 Fotos)",
+      walletSizeDesc: "16 kleine Fotos in Brieftaschengröße",
+      choosePrintFormat: "Druckformat Wählen",
+      quickDownload: "Schneller Download",
+      formatDetails: "Format Details",
+      photosPerSheet: "Fotos pro Blatt",
+      printSize: "Druckgröße",
+      resolution: "Auflösung: 300 DPI (Druckqualität)"
+    },
     features: {
       noUploads: "Keine Uploads",
       privacyFirst: "Datenschutz zuerst",
@@ -224,6 +304,25 @@ export const TRANSLATIONS: Record<string, Translation> = {
     freeDescription: "и с открытым кодом",
     uploadPhoto: "Загрузить фото",
     getPhoto: "Получить фото",
+    printFormats: {
+      title: "Выбрать Формат Печати",
+      single: "Одиночное Фото",
+      singleDesc: "Одно фото в реальном размере",
+      sheet4x6: "Лист 4×6 (4 фото)",
+      sheet4x6Desc: "4 фото на листе 4×6 дюймов",
+      sheet5x7: "Лист 5×7 (6 фото)",
+      sheet5x7Desc: "6 фото на листе 5×7 дюймов",
+      sheetA4: "Лист A4 (8 фото)",
+      sheetA4Desc: "8 фото на листе A4",
+      walletSize: "Лист Размера Кошелька (16 фото)",
+      walletSizeDesc: "16 маленьких фото размера кошелька",
+      choosePrintFormat: "Выбрать Формат Печати",
+      quickDownload: "Быстрая Загрузка",
+      formatDetails: "Детали Формата",
+      photosPerSheet: "фото на лист",
+      printSize: "Размер печати",
+      resolution: "Разрешение: 300 DPI (качество печати)"
+    },
     features: {
       noUploads: "Без загрузок",
       privacyFirst: "Конфиденциальность прежде всего",
@@ -278,6 +377,25 @@ export const TRANSLATIONS: Record<string, Translation> = {
     freeDescription: "en open-source",
     uploadPhoto: "Foto uploaden",
     getPhoto: "Foto krijgen",
+    printFormats: {
+      title: "Printformaat Kiezen",
+      single: "Enkele Foto",
+      singleDesc: "Eén foto op werkelijke grootte",
+      sheet4x6: "4×6 Vel (4 foto's)",
+      sheet4x6Desc: "4 foto's op een 4×6 inch vel",
+      sheet5x7: "5×7 Vel (6 foto's)",
+      sheet5x7Desc: "6 foto's op een 5×7 inch vel",
+      sheetA4: "A4 Vel (8 foto's)",
+      sheetA4Desc: "8 foto's op een A4 vel",
+      walletSize: "Portemonnee Formaat Vel (16 foto's)",
+      walletSizeDesc: "16 kleine portemonnee-formaat foto's",
+      choosePrintFormat: "Printformaat Kiezen",
+      quickDownload: "Snelle Download",
+      formatDetails: "Formaat Details",
+      photosPerSheet: "foto's per vel",
+      printSize: "Printgrootte",
+      resolution: "Resolutie: 300 DPI (printkwaliteit)"
+    },
     features: {
       noUploads: "Geen uploads",
       privacyFirst: "Privacy eerst",
@@ -332,6 +450,25 @@ export const TRANSLATIONS: Record<string, Translation> = {
     freeDescription: "og open-source",
     uploadPhoto: "Upload foto",
     getPhoto: "Få et foto",
+    printFormats: {
+      title: "Vælg Printformat",
+      single: "Enkelt Foto",
+      singleDesc: "Et foto i faktisk størrelse",
+      sheet4x6: "4×6 Ark (4 fotos)",
+      sheet4x6Desc: "4 fotos på et 4×6 tommer ark",
+      sheet5x7: "5×7 Ark (6 fotos)",
+      sheet5x7Desc: "6 fotos på et 5×7 tommer ark",
+      sheetA4: "A4 Ark (8 fotos)",
+      sheetA4Desc: "8 fotos på et A4 ark",
+      walletSize: "Tegnebogsstørrelse Ark (16 fotos)",
+      walletSizeDesc: "16 små tegnebogsstørrelse fotos",
+      choosePrintFormat: "Vælg Printformat",
+      quickDownload: "Hurtig Download",
+      formatDetails: "Format Detaljer",
+      photosPerSheet: "fotos per ark",
+      printSize: "Printstørrelse",
+      resolution: "Opløsning: 300 DPI (printkvalitet)"
+    },
     features: {
       noUploads: "Ingen uploads",
       privacyFirst: "Privatliv først",
@@ -386,6 +523,25 @@ export const TRANSLATIONS: Record<string, Translation> = {
     freeDescription: "och öppen källkod",
     uploadPhoto: "Ladda upp foto",
     getPhoto: "Få ett foto",
+    printFormats: {
+      title: "Välj Utskriftsformat",
+      single: "Enskilt Foto",
+      singleDesc: "Ett foto i verklig storlek",
+      sheet4x6: "4×6 Ark (4 foton)",
+      sheet4x6Desc: "4 foton på ett 4×6 tum ark",
+      sheet5x7: "5×7 Ark (6 foton)",
+      sheet5x7Desc: "6 foton på ett 5×7 tum ark",
+      sheetA4: "A4 Ark (8 foton)",
+      sheetA4Desc: "8 foton på ett A4 ark",
+      walletSize: "Plånboksstorlek Ark (16 foton)",
+      walletSizeDesc: "16 små plånboksstorlek foton",
+      choosePrintFormat: "Välj Utskriftsformat",
+      quickDownload: "Snabb Nedladdning",
+      formatDetails: "Format Detaljer",
+      photosPerSheet: "foton per ark",
+      printSize: "Utskriftsstorlek",
+      resolution: "Upplösning: 300 DPI (utskriftskvalitet)"
+    },
     features: {
       noUploads: "Inga uppladdningar",
       privacyFirst: "Integritet först",

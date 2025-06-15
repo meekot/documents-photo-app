@@ -8,13 +8,14 @@ import {
   DialogTitle,
 } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
-import { CheckCircle, Loader2, Camera, Upload, Download, X } from "lucide-react";
+import { CheckCircle, Loader2, Camera, Upload, Download, X, Printer } from "lucide-react";
 // import { useFaceMeshModel } from '@/lib/useFaceMeshModel';
 import { usePassportPhotoProcessor } from '@/lib/usePassportPhotoProcessor';
 import { resizeImage } from '@/lib/resizeImage';
 import { Country } from "@/config/countries";
 import { Translation } from "@/config/translations";
 import { loadFaceMesh } from '@/lib/useFaceMesh';
+import { PrintFormatDialog } from './PrintFormatDialog';
 
 export type ProcessingStep = 'loading' | 'analyzing' | 'cropping' | 'preparing' | 'completed';
 type DialogState = 'upload' | 'processing' | 'result' | 'error';
@@ -42,6 +43,7 @@ export function PhotoUploadDialog({ isOpen, onClose, country, translation }: Pho
   const [currentStep, setCurrentStep] = useState<ProcessingStep>('loading');
   const [imageURL, setImageURL] = useState<string | null>(null);
   const [errorMessage, setErrorMessage] = useState<string>('');
+  const [showPrintDialog, setShowPrintDialog] = useState(false);
 
   const modelLoaded = useRef(false);
 
@@ -254,11 +256,19 @@ export function PhotoUploadDialog({ isOpen, onClose, country, translation }: Pho
 
       <div className="flex flex-col space-y-3">
         <Button
-          onClick={downloadImage}
+          onClick={() => setShowPrintDialog(true)}
           className="bg-[#44b871] hover:bg-[#318451] text-white w-full"
         >
+          <Printer className="w-4 h-4 mr-2" />
+          Choose Print Format
+        </Button>
+        <Button
+          onClick={downloadImage}
+          variant="outline"
+          className="w-full"
+        >
           <Download className="w-4 h-4 mr-2" />
-          Download Photo
+          Quick Download
         </Button>
         <Button
           onClick={handleTryAgain}
@@ -315,18 +325,30 @@ export function PhotoUploadDialog({ isOpen, onClose, country, translation }: Pho
   };
 
   return (
-    <Dialog open={isOpen} onOpenChange={handleClose}>
-      <DialogContent className="sm:max-w-md max-h-[90vh] overflow-y-auto">
-        <DialogHeader>
-          <DialogTitle className="text-center">
-            {getDialogTitle()}
-          </DialogTitle>
-        </DialogHeader>
-        
-        <div className="py-4">
-          {renderContent()}
-        </div>
-      </DialogContent>
-    </Dialog>
+    <>
+      <Dialog open={isOpen} onOpenChange={handleClose}>
+        <DialogContent className="sm:max-w-md max-h-[90vh] overflow-y-auto">
+          <DialogHeader>
+            <DialogTitle className="text-center">
+              {getDialogTitle()}
+            </DialogTitle>
+          </DialogHeader>
+          
+          <div className="py-4">
+            {renderContent()}
+          </div>
+        </DialogContent>
+      </Dialog>
+
+      {imageURL && (
+        <PrintFormatDialog
+          isOpen={showPrintDialog}
+          onClose={() => setShowPrintDialog(false)}
+          imageURL={imageURL}
+          country={country}
+          translation={translation}
+        />
+      )}
+    </>
   );
 }
