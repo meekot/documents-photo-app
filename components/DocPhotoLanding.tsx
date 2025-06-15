@@ -1,3 +1,4 @@
+"use client";
 import CountryFooter from "@/components/CountryFooter";
 import { PhotoUploadDialog } from "@/components/PhotoUploadDialog";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
