@@ -1,4 +1,5 @@
-"use client";
+'use client';
+
 import CountryFooter from "@/components/CountryFooter";
 import { PhotoUploadDialog } from "@/components/PhotoUploadDialog";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
@@ -60,12 +61,9 @@ export default function DocPhotoLanding({ country, translation, currentLang }: D
             <div className="flex items-center space-x-2">
               <select 
                 value={currentLang}
-                onChange={() => {
-                  if (typeof window !== 'undefined') {
-                    // window.location.href = `/${country.code}/${e.target.value}`;
-                  }
+                onChange={(e) => {
+                  window.location.href = `/${country.code}/${e.target.value}`;
                 }}
-
                 className="text-sm border border-border rounded px-2 py-1"
               >
                 {country.languages.map(lang => (
