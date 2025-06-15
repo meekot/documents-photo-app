@@ -256,6 +256,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 **Made with ❤️ for the European community**
 
-[🌐 Visit DocPhoto.eu](https://docphoto.eu) • [📱 Try it now](https://docphoto.eu) • [⭐ Star on GitHub](https://github.com/meekot/documents-photo-app)
+[🌐 Visit Doc-Photo.eu](https://doc-photo.eu) • [📱 Try it now](https://doc-photo.eu) • [⭐ Star on GitHub](https://github.com/meekot/documents-photo-app)
 
 </div>
