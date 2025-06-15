@@ -1,21 +1,22 @@
 'use client';
 
-import React, { useCallback, useRef, useState } from 'react';
+import { Button } from "@/components/ui/button";
 import {
   Dialog,
   DialogContent,
   DialogHeader,
   DialogTitle,
 } from "@/components/ui/dialog";
-import { Button } from "@/components/ui/button";
-import { CheckCircle, Loader2, Camera, Upload, Download, X, Printer } from "lucide-react";
+import { CheckCircle, Download, Loader2, Printer, Upload, X } from "lucide-react";
+import React, { useCallback, useRef, useState } from 'react';
 // import { useFaceMeshModel } from '@/lib/useFaceMeshModel';
-import { usePassportPhotoProcessor } from '@/lib/usePassportPhotoProcessor';
-import { resizeImage } from '@/lib/resizeImage';
 import { Country } from "@/config/countries";
 import { Translation } from "@/config/translations";
+import { resizeImage } from '@/lib/resizeImage';
 import { loadFaceMesh } from '@/lib/useFaceMesh';
+import { usePassportPhotoProcessor } from '@/lib/usePassportPhotoProcessor';
 import { PrintFormatDialog } from './PrintFormatDialog';
+import Image from 'next/image';
 
 export type ProcessingStep = 'loading' | 'analyzing' | 'cropping' | 'preparing' | 'completed';
 type DialogState = 'upload' | 'processing' | 'result' | 'error';
@@ -243,10 +244,12 @@ export function PhotoUploadDialog({ isOpen, onClose, country, translation }: Pho
 
       {imageURL && (
         <div className="text-center">
-          <img
+          <Image
             src={imageURL}
             alt="Processed passport photo"
-            className="w-[207px] h-[266px] border-2 border-[#e5e8eb] shadow-lg rounded mx-auto mb-4"
+            width={207}
+            height={266}
+            className="border-2 border-[#e5e8eb] shadow-lg rounded mx-auto mb-4"
           />
           <div className="text-sm text-[#61758a] mb-6">
             Size: {country.photoSize} • Print ready

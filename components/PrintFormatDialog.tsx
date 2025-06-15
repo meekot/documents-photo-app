@@ -1,17 +1,17 @@
 'use client';
 
-import React, { useEffect, useState } from 'react';
-import {
-  Dialog,
-  DialogContent,
-  DialogHeader,
-  DialogTitle,
-} from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
-import { Download, Loader2, FileImage, Grid3X3, Printer } from "lucide-react";
-import { PRINT_FORMATS, PrintFormat, generatePrintSheet, getRecommendedFormat } from '@/lib/printFormats';
+import {
+    Dialog,
+    DialogContent,
+    DialogHeader,
+    DialogTitle,
+} from "@/components/ui/dialog";
 import { Country } from "@/config/countries";
 import { Translation } from "@/config/translations";
+import { PRINT_FORMATS, PrintFormat, generatePrintSheet, getRecommendedFormat } from '@/lib/printFormats';
+import { Download, FileImage, Grid3X3, Loader2, Printer } from "lucide-react";
+import { useEffect, useState } from 'react';
 
 interface PrintFormatDialogProps {
   isOpen: boolean;
@@ -26,7 +26,6 @@ export function PrintFormatDialog({
   onClose, 
   imageURL, 
   country, 
-  translation 
 }: PrintFormatDialogProps) {
   const [selectedFormat, setSelectedFormat] = useState<PrintFormat>(
     getRecommendedFormat(country.photoSize)

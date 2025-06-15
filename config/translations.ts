@@ -18,8 +18,8 @@ export interface Translation {
     sheetA4Desc: string;
     walletSize: string;
     walletSizeDesc: string;
-    canonSelphy: string;
-    canonSelphyDesc: string;
+    // canonSelphy: string;
+    // canonSelphyDesc: string;
     choosePrintFormat: string;
     quickDownload: string;
     formatDetails: string;
@@ -95,8 +95,6 @@ export const TRANSLATIONS: Record<string, Translation> = {
       sheetA4Desc: "8 photos on an A4 sheet",
       walletSize: "Wallet Size Sheet (16 photos)",
       walletSizeDesc: "16 small wallet-sized photos",
-      canonSelphy: "Canon Selphy (4×6 inch)",
-      canonSelphyDesc: "Optimized for Canon Selphy printers",
       choosePrintFormat: "Choose Print Format",
       quickDownload: "Quick Download",
       formatDetails: "Format Details",

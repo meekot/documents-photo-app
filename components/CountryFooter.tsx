@@ -1,10 +1,9 @@
 'use client';
 
-import Link from 'next/link';
-import Image from 'next/image';
-import { Github } from 'lucide-react';
 import { COUNTRIES } from '@/config/countries';
 import { Translation } from '@/config/translations';
+import { Github } from 'lucide-react';
+import Link from 'next/link';
 
 interface CountryFooterProps {
   translation: Translation;

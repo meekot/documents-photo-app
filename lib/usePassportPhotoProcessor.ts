@@ -7,6 +7,7 @@ const PASSPORT_DIMENSIONS = {
   targetFaceHeight: 400,
 } as const;
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 function alignEyesHorizontally(canvas: HTMLCanvasElement, landmarks: any[]): HTMLCanvasElement {
   // MediaPipe FaceMesh eye landmark indices
   // Left eye (from viewer's perspective): landmarks[33] (outer corner), landmarks[133] (inner corner)
